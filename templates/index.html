@@ -2,7 +2,6 @@
 
 {% block content %}
 <section class="text-center py-20 bg-white rounded-lg shadow-lg mb-12">
-    <h1 class="text-5xl font-bold text-gray-800 mb-4">Hi, I'm SAM</h1>
     <div class="max-w-3xl mx-auto">
         <p class="text-xl text-gray-600 mb-6">Engineering Manager, Full Stack Developer & Web Scraping Specialist</p>
         <div class="flex flex-wrap justify-center gap-2 mb-8">
@@ -17,48 +16,545 @@
         </p>
         <div class="flex justify-center space-x-4">
             <a href="https://github.com/mohonthecyberghost" class="bg-gray-800 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition duration-300">GitHub</a>
+            <a href="https://www.upwork.com/freelancers/mohon007" class="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-500 transition duration-300">Upwork</a>
             <a href="/contact" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-500 transition duration-300">Contact Me</a>
         </div>
     </div>
 </section>
 
 <section id="projects" class="mb-12">
-    <h2 class="text-3xl font-bold text-gray-800 mb-8">Web Scraping Projects</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {% for project in projects.web_scraping %}
-        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-            <div class="p-6">
-                <h3 class="text-xl font-bold text-gray-800 mb-2">{{ project.title }}</h3>
-                <p class="text-gray-600 mb-4">{{ project.description }}</p>
-                <div class="flex flex-wrap gap-2 mb-4">
-                    {% for tech in project.technologies %}
-                    <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm">{{ tech }}</span>
-                    {% endfor %}
+    <h2 class="text-3xl font-bold text-gray-800 mb-8">Projects</h2>
+    
+    <!-- LLM and Data Analysis Section -->
+    <div class="mb-12">
+        <div class="flex items-center mb-6">
+            <svg class="w-8 h-8 text-indigo-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/>
+            </svg>
+            <h3 class="text-2xl font-semibold text-gray-800">LLM and Data Analysis</h3>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Chatbot Development -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-6 h-6 text-indigo-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/>
+                        </svg>
+                        <h4 class="text-xl font-semibold text-gray-800">AI Chatbot Development</h4>
+                    </div>
+                    <p class="text-gray-600 mb-4">Full-stack AI chatbot powered by Google's Gemini 1.5 Flash model with image support and dynamic conversations.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">React</span>
+                        <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Flask</span>
+                        <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Gemini</span>
+                        <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">MongoDB</span>
+                    </div>
+                    <div class="space-y-2 mb-4">
+                        <h5 class="font-semibold text-gray-700">Key Features:</h5>
+                        <ul class="text-sm text-gray-600 list-disc list-inside">
+                            <li>JWT-based authentication & role-based access</li>
+                            <li>Image input support with Gemini AI</li>
+                            <li>Streaming responses & Markdown rendering</li>
+                            <li>Chat history persistence for managers</li>
+                        </ul>
+                    </div>
+                    <div class="flex justify-between mt-6">
+                        <a href="https://github.com/mohonthecyberghost/chat-bot" 
+                           class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-700 bg-gray-100 rounded hover:bg-gray-200 transition-colors duration-200" 
+                           target="_blank">
+                            <svg class="w-3.5 h-3.5 mr-1" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                            GitHub
+                        </a>
+                        <a href="https://chat-bot-gemini.onrender.com/" 
+                           class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-white bg-green-600 rounded hover:bg-green-700 transition-colors duration-200" 
+                           target="_blank">
+                            <svg class="w-3.5 h-3.5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                            </svg>
+                            Live Demo
+                        </a>
+                    </div>
                 </div>
-                <a href="{{ project.github_url }}" class="text-blue-600 hover:text-blue-800" target="_blank">View on GitHub →</a>
+            </div>
+
+            <!-- Data Analysis & Forecasting -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-6 h-6 text-pink-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                        </svg>
+                        <h4 class="text-xl font-semibold text-gray-800">Data Analysis & Forecasting</h4>
+                    </div>
+                    <p class="text-gray-600 mb-4">Collection of Jupyter notebooks for data analysis and machine learning tasks, focusing on regression models and data visualization.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm">Python</span>
+                        <span class="bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm">scikit-learn</span>
+                        <span class="bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm">pandas</span>
+                        <span class="bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm">matplotlib</span>
+                    </div>
+                    <div class="space-y-2 mb-4">
+                        <h5 class="font-semibold text-gray-700">Key Features:</h5>
+                        <ul class="text-sm text-gray-600 list-disc list-inside">
+                            <li>Linear & Polynomial Regression Analysis</li>
+                            <li>Data Visualization with Matplotlib/Seaborn</li>
+                            <li>Model Evaluation & Train-Test Split</li>
+                            <li>Interactive Jupyter Notebooks</li>
+                        </ul>
+                    </div>
+                    <div class="flex justify-between mt-6">
+                        <a href="https://github.com/mohonthecyberghost/DataAnalysis" 
+                           class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-700 bg-gray-100 rounded hover:bg-gray-200 transition-colors duration-200" 
+                           target="_blank">
+                            <svg class="w-3.5 h-3.5 mr-1" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                            GitHub
+                        </a>
+                        <a href="https://colab.research.google.com/github/mohonthecyberghost/DataAnalysis/blob/master/ML-Linear.ipynb" 
+                           class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-white bg-green-600 rounded hover:bg-green-700 transition-colors duration-200" 
+                           target="_blank">
+                            <svg class="w-3.5 h-3.5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                            </svg>
+                            Live Demo
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
-        {% endfor %}
+    </div>
+
+    <!-- Web Scraping Projects Section -->
+    <div class="mb-12">
+        <div class="flex items-center mb-6">
+            <svg class="w-8 h-8 text-orange-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/>
+            </svg>
+            <h3 class="text-2xl font-semibold text-gray-800">Web Scraping</h3>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Instagram Bulk Profile Scraper -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+                <div class="p-6 flex-grow">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-6 h-6 text-orange-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                        <h4 class="text-xl font-semibold text-gray-800">Instagram Bulk Profile Scraper</h4>
+                    </div>
+                    <p class="text-gray-600 mb-4">A powerful web application for bulk scraping Instagram profiles using Apify, featuring MongoDB storage and a modern admin interface.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm border border-orange-200 shadow-sm">Node.js</span>
+                        <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm border border-orange-200 shadow-sm">MongoDB</span>
+                        <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm border border-orange-200 shadow-sm">Apify</span>
+                        <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm border border-orange-200 shadow-sm">Express</span>
+                    </div>
+                    <div class="space-y-2 mb-4">
+                        <h5 class="font-semibold text-gray-700">Key Features:</h5>
+                        <ul class="text-sm text-gray-600 list-disc list-inside">
+                            <li>Bulk profile scraping with duplicate detection</li>
+                            <li>CSV file upload support</li>
+                            <li>Profile data storage (names, email, followers, posts)</li>
+                            <li>Modern admin interface</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="p-6 pt-0 mt-auto">
+                    <div class="flex justify-between">
+                        <a href="https://github.com/mohonthecyberghost/instagram-bulk-scraper-apify" 
+                           class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-700 bg-gray-100 rounded hover:bg-gray-200 transition-colors duration-200" 
+                           target="_blank">
+                            <svg class="w-3.5 h-3.5 mr-1" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                            GitHub
+                        </a>
+                        <a href="https://instagram-bulk-scraper-apify.onrender.com/" 
+                           class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-white bg-green-600 rounded hover:bg-green-700 transition-colors duration-200" 
+                           target="_blank">
+                            <svg class="w-3.5 h-3.5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                            </svg>
+                            Live Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Airtasker Scraper -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+                <div class="p-6 flex-grow">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-6 h-6 text-orange-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                        <h4 class="text-xl font-semibold text-gray-800">Airtasker Scraper to Google Sheets</h4>
+                    </div>
+                    <p class="text-gray-600 mb-4">Automated scraper for Airtasker.com that feeds filtered job posts to Google Sheets in near real-time based on keyword matching.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm border border-orange-200 shadow-sm">Python</span>
+                        <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm border border-orange-200 shadow-sm">Playwright</span>
+                        <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm border border-orange-200 shadow-sm">Google Sheets API</span>
+                        <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm border border-orange-200 shadow-sm">OAuth2</span>
+                    </div>
+                    <div class="space-y-2 mb-4">
+                        <h5 class="font-semibold text-gray-700">Key Features:</h5>
+                        <ul class="text-sm text-gray-600 list-disc list-inside">
+                            <li>Real-time job posting scraping</li>
+                            <li>Customizable keyword filtering</li>
+                            <li>Automatic Google Sheets updates</li>
+                            <li>15-minute scheduling interval</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="p-6 pt-0 mt-auto">
+                    <div class="flex justify-between">
+                        <a href="https://github.com/mohonthecyberghost/airtasker-scraper-to-sheets" 
+                           class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-700 bg-gray-100 rounded hover:bg-gray-200 transition-colors duration-200" 
+                           target="_blank">
+                            <svg class="w-3.5 h-3.5 mr-1" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                            GitHub
+                        </a>
+                        <a href="https://docs.google.com/spreadsheets/d/1YOUR_SPREADSHEET_ID/edit" 
+                           class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-white bg-green-600 rounded hover:bg-green-700 transition-colors duration-200" 
+                           target="_blank">
+                            <svg class="w-3.5 h-3.5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                            </svg>
+                            Live Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Puppeteer API Scraper -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+                <div class="p-6 flex-grow">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-6 h-6 text-orange-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                        <h4 class="text-xl font-semibold text-gray-800">Google Search API with Puppeteer</h4>
+                    </div>
+                    <p class="text-gray-600 mb-4">A Node.js application that uses Puppeteer to perform Google searches and expose the results via a RESTful API with a modern web interface.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm border border-orange-200 shadow-sm">Node.js</span>
+                        <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm border border-orange-200 shadow-sm">Puppeteer</span>
+                        <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm border border-orange-200 shadow-sm">Express.js</span>
+                        <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm border border-orange-200 shadow-sm">REST API</span>
+                    </div>
+                    <div class="space-y-2 mb-4">
+                        <h5 class="font-semibold text-gray-700">Key Features:</h5>
+                        <ul class="text-sm text-gray-600 list-disc list-inside">
+                            <li>Google search automation with Puppeteer</li>
+                            <li>RESTful API endpoint for search queries</li>
+                            <li>Modern web interface with loading states</li>
+                            <li>Structured search results (title, link, snippet)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="p-6 pt-0 mt-auto">
+                    <div class="flex justify-between">
+                        <a href="https://github.com/mohonthecyberghost/puppeteer-api-scraper" 
+                           class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-700 bg-gray-100 rounded hover:bg-gray-200 transition-colors duration-200" 
+                           target="_blank">
+                            <svg class="w-3.5 h-3.5 mr-1" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                            GitHub
+                        </a>
+                        <a href="https://puppeteer-api-scraper-2m4s.onrender.com/" 
+                           class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-white bg-green-600 rounded hover:bg-green-700 transition-colors duration-200" 
+                           target="_blank">
+                            <svg class="w-3.5 h-3.5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                            </svg>
+                            Live Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DocuClipper Invoice Parser -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+                <div class="p-6 flex-grow">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-6 h-6 text-orange-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                        <h4 class="text-xl font-semibold text-gray-800">DocuClipper Invoice Parser</h4>
+                    </div>
+                    <p class="text-gray-600 mb-4">A Python script that processes PDF invoices through the DocuClipper API to extract line items and convert them to XLSX format.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm border border-orange-200 shadow-sm">Python</span>
+                        <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm border border-orange-200 shadow-sm">DocuClipper API</span>
+                        <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm border border-orange-200 shadow-sm">PDF Processing</span>
+                        <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm border border-orange-200 shadow-sm">XLSX Conversion</span>
+                    </div>
+                    <div class="space-y-2 mb-4">
+                        <h5 class="font-semibold text-gray-700">Key Features:</h5>
+                        <ul class="text-sm text-gray-600 list-disc list-inside">
+                            <li>Batch processing of multiple PDF invoices</li>
+                            <li>Automatic document upload and processing</li>
+                            <li>XLSX format conversion with original filename preservation</li>
+                            <li>Comprehensive error handling and status monitoring</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="p-6 pt-0 mt-auto">
+                    <div class="flex justify-between">
+                        <a href="https://github.com/mohonthecyberghost/docuclipper-invoice-parser" 
+                           class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-700 bg-gray-100 rounded hover:bg-gray-200 transition-colors duration-200" 
+                           target="_blank">
+                            <svg class="w-3.5 h-3.5 mr-1" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Indeed Resume Scraper -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+                <div class="p-6 flex-grow">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-6 h-6 text-orange-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                        <h4 class="text-xl font-semibold text-gray-800">Indeed Resume Scraper</h4>
+                    </div>
+                    <p class="text-gray-600 mb-4">A no-code-friendly scraper for Indeed Resume that collects candidate information and resumes based on customizable search filters.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm border border-orange-200 shadow-sm">Python</span>
+                        <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm border border-orange-200 shadow-sm">Make.com</span>
+                        <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm border border-orange-200 shadow-sm">Google API</span>
+                        <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm border border-orange-200 shadow-sm">Webhook</span>
+                    </div>
+                    <div class="space-y-2 mb-4">
+                        <h5 class="font-semibold text-gray-700">Key Features:</h5>
+                        <ul class="text-sm text-gray-600 list-disc list-inside">
+                            <li>Dynamic search filters (keywords, location, experience)</li>
+                            <li>Extracts candidate info and downloads resumes</li>
+                            <li>Exports to CSV/Google Sheets & uploads to Drive</li>
+                            <li>No-code integration via Make.com or n8n</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="p-6 pt-0 mt-auto">
+                    <div class="flex justify-between">
+                        <a href="https://github.com/mohonthecyberghost/indeed-resume-scraper-nocode" 
+                           class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-700 bg-gray-100 rounded hover:bg-gray-200 transition-colors duration-200" 
+                           target="_blank">
+                            <svg class="w-3.5 h-3.5 mr-1" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- X.com Tweet Scraper -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+                <div class="p-6 flex-grow">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-6 h-6 text-orange-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                        </svg>
+                        <h4 class="text-xl font-semibold text-gray-800">X.com Tweet Scraper</h4>
+                    </div>
+                    <p class="text-gray-600 mb-4">A Python script that uses Playwright to scrape tweets from X.com (formerly Twitter) based on search conditions.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm border border-orange-200 shadow-sm">Python</span>
+                        <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm border border-orange-200 shadow-sm">Playwright</span>
+                        <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm border border-orange-200 shadow-sm">JSON</span>
+                        <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm border border-orange-200 shadow-sm">Headless Browser</span>
+                    </div>
+                    <div class="space-y-2 mb-4">
+                        <h5 class="font-semibold text-gray-700">Key Features:</h5>
+                        <ul class="text-sm text-gray-600 list-disc list-inside">
+                            <li>Search by keyword and date range</li>
+                            <li>Collects tweet text, username, and metrics</li>
+                            <li>Handles infinite scrolling for more tweets</li>
+                            <li>Secure credential management with .env</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="p-6 pt-0 mt-auto">
+                    <div class="flex justify-between">
+                        <a href="https://github.com/mohonthecyberghost/x-search-tweets-playwright" 
+                           class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-700 bg-gray-100 rounded hover:bg-gray-200 transition-colors duration-200" 
+                           target="_blank">
+                            <svg class="w-3.5 h-3.5 mr-1" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+
+    <!-- QA Automation Section -->
+    <div class="mb-12">
+        <div class="flex items-center mb-6">
+            <svg class="w-8 h-8 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <h3 class="text-2xl font-semibold text-gray-800">QA Automation</h3>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+
+            <!-- SeleniumMaven Framework -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+                <div class="p-6 flex-grow">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-6 h-6 text-blue-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
+                        </svg>
+                        <h4 class="text-xl font-semibold text-gray-800">SeleniumMaven Framework</h4>
+                    </div>
+                    <p class="text-gray-600 mb-4">End-to-end Selenium automation framework with Maven, WebDriverManager, POM, TestNG, Apache POI, Log4j, and reporting — designed for scalable, real-world QA automation.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm border border-blue-200 shadow-sm">Java</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm border border-blue-200 shadow-sm">Selenium</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm border border-blue-200 shadow-sm">Maven</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm border border-blue-200 shadow-sm">TestNG</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm border border-blue-200 shadow-sm">Page Object Model</span>
+                    </div>
+                    <div class="space-y-2 mb-4">
+                        <h5 class="font-semibold text-gray-700">Key Features:</h5>
+                        <ul class="text-sm text-gray-600 list-disc list-inside">
+                            <li>Comprehensive web element interaction handling</li>
+                            <li>Data-driven testing with Apache POI</li>
+                            <li>Extent Reports for detailed test reporting</li>
+                            <li>Log4j integration for robust logging</li>
+                            <li>CI/CD integration with Jenkins</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="p-6 pt-0 mt-auto">
+                    <div class="flex justify-between">
+                        <a href="https://github.com/mohonthecyberghost/seleniummaven" 
+                           class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-700 bg-gray-100 rounded hover:bg-gray-200 transition-colors duration-200" 
+                           target="_blank">
+                            <svg class="w-3.5 h-3.5 mr-1" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <!-- Camera Automation with Appium -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+                <div class="p-6 flex-grow">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        </svg>
+                        <h4 class="text-xl font-semibold text-gray-800">Camera Automation with Appium</h4>
+                    </div>
+                    <p class="text-gray-600 mb-4">End-to-end automation framework for testing mobile camera applications across Android devices using Appium.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm border border-green-200 shadow-sm">Appium</span>
+                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm border border-green-200 shadow-sm">Java</span>
+                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm border border-green-200 shadow-sm">Android</span>
+                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm border border-green-200 shadow-sm">TestNG</span>
+                    </div>
+                    <div class="space-y-2 mb-4">
+                        <h5 class="font-semibold text-gray-700">Key Features:</h5>
+                        <ul class="text-sm text-gray-600 list-disc list-inside">
+                            <li>Automated camera app launch and control</li>
+                            <li>Photo capture and video recording automation</li>
+                            <li>Camera UI element validation</li>
+                            <li>Support for real devices and emulators</li>
+                            <li>CI/CD pipeline integration ready</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="p-6 pt-0 mt-auto">
+                    <div class="flex justify-between">
+                        <a href="https://github.com/mohonthecyberghost/camearaatuomation" 
+                           class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-700 bg-gray-100 rounded hover:bg-gray-200 transition-colors duration-200" 
+                           target="_blank">
+                            <svg class="w-3.5 h-3.5 mr-1" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- JMeter-Groovy Load Testing Framework -->
+            <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col">
+                <div class="flex items-center mb-4">
+                    <svg class="w-8 h-8 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                    </svg>
+                    <h3 class="text-xl font-semibold text-gray-800">JMeter-Groovy Load Testing Framework</h3>
+                </div>
+                <p class="text-gray-600 mb-4">A powerful and flexible performance testing framework built with Apache JMeter and Groovy scripting, enhanced with REST Assured for robust API testing.</p>
+                
+                <div class="mb-4">
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm border border-blue-200 shadow-sm">Java</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm border border-blue-200 shadow-sm">JMeter</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm border border-blue-200 shadow-sm">Groovy</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm border border-blue-200 shadow-sm">REST Assured</span>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <h4 class="font-semibold text-gray-800 mb-2">Key Features:</h4>
+                    <ul class="list-disc list-inside text-gray-600 space-y-1">
+                        <li>Dynamic test data generation</li>
+                        <li>Custom JMeter samplers</li>
+                        <li>Reusable Groovy scripts</li>
+                        <li>Configurable test scenarios</li>
+                        <li>Detailed reporting</li>
+                        <li>REST Assured integration</li>
+                        <li>Response validation</li>
+                        <li>JSON parsing and manipulation</li>
+                    </ul>
+                </div>
+
+                <div class="mt-auto pt-4">
+                    <a href="https://github.com/mohonthecyberghost/JMeter-Groovy-Load-Testing-Framework" 
+                       class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-700 bg-gray-100 rounded hover:bg-gray-200 transition-colors duration-200" 
+                       target="_blank">
+                        <svg class="w-3.5 h-3.5 mr-1" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
-<section class="mb-12">
-    <h2 class="text-3xl font-bold text-gray-800 mb-8">Other Projects</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {% for project in projects.other_projects %}
-        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-            <div class="p-6">
-                <h3 class="text-xl font-bold text-gray-800 mb-2">{{ project.title }}</h3>
-                <p class="text-gray-600 mb-4">{{ project.description }}</p>
-                <div class="flex flex-wrap gap-2 mb-4">
-                    {% for tech in project.technologies %}
-                    <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm">{{ tech }}</span>
-                    {% endfor %}
-                </div>
-                <a href="{{ project.github_url }}" class="text-blue-600 hover:text-blue-800" target="_blank">View on GitHub →</a>
-            </div>
-        </div>
-        {% endfor %}
-    </div>
-</section>
 {% endblock %} 

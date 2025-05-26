@@ -6,22 +6,7 @@ app = Flask(__name__)
 # Project data
 projects = {
     'web_scraping': [
-        {
-            'title': 'Web Scraping Project 1',
-            'description': 'Description of your web scraping project',
-            'github_url': 'https://github.com/yourusername/project1',
-            'technologies': ['Python', 'BeautifulSoup4', 'Requests']
-        },
         # Add more web scraping projects here
-    ],
-    'other_projects': [
-        {
-            'title': 'Other Project 1',
-            'description': 'Description of your other project',
-            'github_url': 'https://github.com/yourusername/other-project1',
-            'technologies': ['Python', 'Flask']
-        },
-        # Add more projects here
     ]
 }
 
